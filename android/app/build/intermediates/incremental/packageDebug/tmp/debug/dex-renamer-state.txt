@@ -1,0 +1,4 @@
+#Wed Nov 27 23:58:26 MSK 2019
+base.0=C\:\\Users\\User\\WebstormProjects\\TaskReact\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
