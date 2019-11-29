@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
   },
   child2: {
     alignSelf: 'center',
-    backgroundColor: 'yellow',
     position: 'absolute',
   },
 });
@@ -120,19 +119,21 @@ export class FirstScreen extends Component {
   }
 
   onGetPhoneData() {
-    const screenWidth = Math.round(Dimensions.get('window').width);
-    const screenHeight = Math.round(Dimensions.get('window').height);
-    const hardware = DeviceInfo.getHardware();
+    const window = Dimensions.get('window');
+    const screenWidth = window.width * window.scale;
+    const screenHeight = window.height * window.scale;
+    const nameDevice = DeviceInfo.getModel();
 
     const message =
-      'screenWidth: ' +
+      'Device Width: ' +
       screenWidth +
       ';\n' +
-      'screenHeight: ' +
+      'Device Height: ' +
       screenHeight +
       ';\n' +
-      'Hardware: ' +
-      hardware;
+      'Device name: ' +
+      nameDevice +
+      ';\n';
 
     alert(message);
   }
